@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>mortgage calculator</title>
-    <script defer src="./scripts/index.js"></script>
+    <script defer src="../scripts/index.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -24,12 +24,13 @@
         <h1>Mortgage Calculator</h1>
         <ul class="nav nav-underline">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="../index.html"
-              >Home page</a
-            >
+            <a class="nav-link" href="../index.html">Home page</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="./mortgage.html"
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="./mortgage.html"
               >Mortgage calculator</a
             >
           </li>
@@ -40,6 +41,51 @@
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <form
+        class="d-flex justify-content-center align-items-center"
+        id="mortgage-form"
+      >
+        <div class="card" style="width: 40rem; height: 40rem">
+          <div class="card-body d-flex flex-column justify-content-center">
+            <h5 class="card-title">Mortgage calculator</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">
+              Calculate your mortgage here
+            </h6>
+            <!-- <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p> -->
+            <div class="d-flex flex-column gap-2 mb-5">
+              <input
+                class="form-control form-control-lg"
+                type="text"
+                id="principal"
+                name="principal"
+                placeholder="Principal"
+                aria-label=".form-control-lg example"
+              />
+              <input
+                class="form-control form-control-lg"
+                type="text"
+                id="interest"
+                name="interest"
+                placeholder="Interest rate"
+                aria-label=".form-control-lg example"
+              />
+              <input
+                class="form-control form-control-lg"
+                type="text"
+                id="loanLength"
+                name="loanLength"
+                placeholder="Loan length"
+                aria-label=".form-control-lg example"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </form>
+    </main>
   </body>
 </html>
